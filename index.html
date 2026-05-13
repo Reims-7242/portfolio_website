@@ -33,34 +33,42 @@
 <div class="position-relative w-100" style="min-height: 400px;">
   
   <!-- САМО ВИДЕО -->
-  <!-- Важно: используйте position-absolute, чтобы видео накладывалось на контент -->
   <video class="position-absolute top-0 start-0 w-100 h-100" autoplay muted loop playsinline style="object-fit: cover;">
-    <!-- Укажите ПРАВИЛЬНЫЙ путь к вашему файлу -->
     <source src="assets/video/nebo.mp4" type="video/mp4">
-    <!-- Добавьте файл в формате WebM для лучшей совместимости -->
     <source src="assets/video/nebo.webm" type="video/webm">
     Your browser does not support the video tag.
   </video>
-    <div class="card-content">
-        <h3>Программах, в которых работаю</h3>
-        <p></p>
-        <p>Adobe Illustrator</p>
-        <p>Adobe After Effects</p>
-        <p>Adobe InDesign</p>
-        <p>Adobe Photoshop</p>
-        <p>Bootstrap Studio</p>
-        <p>CorelDRAW.Graphics.Suite</p>
-        <p>Easy Paint Tool SAI 2</p>
-        <p>Krita</p>
-        <p>Movavi Video Editor 25</p>
-        <p>Blender</p>
-    </div>
+
+  <!-- КОНТЕНТ ПОВЕРХ ВИДЕО (исправлено) -->
+  <div class="card-content position-relative z-index-1">
+    <h3>Программах, в которых работаю</h3>
+    <p>Adobe Illustrator</p>
+    <p>Adobe After Effects</p>
+    <p>Adobe InDesign</p>
+    <p>Adobe Photoshop</p>
+    <p>Bootstrap Studio</p>
+    <p>CorelDRAW.Graphics.Suite</p>
+    <p>Easy Paint Tool SAI 2</p>
+    <p>Krita</p>
+    <p>Movavi Video Editor 25</p>
+    <p>Blender</p>
+  </div>
 </div>
 
 <style>
-  /* Вспомогательный класс для z-index, если у вас его нет */
   .z-index-1 {
     z-index: 1;
+  }
+  
+  /* Дополнительные стили для красоты */
+  .card-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 16px;
+    color: white;
+    max-width: 400px;
+    margin: 20px;
+    backdrop-filter: blur(5px);
   }
 </style></div>
         </div>
