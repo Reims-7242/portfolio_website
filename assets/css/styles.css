@@ -1,0 +1,72 @@
+.video-card {
+  position: initial;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-card video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  color: white;
+  text-align: center;
+  background: rgba(0,0,0,0);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  font-family: 'Dudka', sans-serif;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  color: white;
+  text-align: inherit;
+  background: rgba(0,0,0,0);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 25px;
+  color: white;
+  text-align: initial;
+  background: rgba(0,0,0,0);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  color: white;
+  text-align: inherit;
+  background: rgba(0,0,0,0);
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+

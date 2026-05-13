@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'Dudka';
+	src: url(../../assets/fonts/Dudka-57d086c2d38073ba7998aca4d46d7be8.woff2) format('woff2'),
+	url(../../assets/fonts/Dudka-9d03406f0f20fd3c77b0d8844ab06f93.woff) format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Dudka';
+	src: url(../../assets/fonts/Dudka-654107f3d404ca83f4c85546ad301369.woff2) format('woff2'),
+	url(../../assets/fonts/Dudka-56e6e52e7d5cf6a71f11187e6a423202.woff) format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
