@@ -30,14 +30,10 @@
     <header class="mt-8">
         <div>
             <div class="container"><!-- Контейнер для видео и контента -->
-<div class="position-relative w-100" style="min-height: 400px;">
-  
-  <!-- САМО ВИДЕО -->
-  <video class="position-absolute top-0 start-0 w-100 h-100" autoplay muted loop playsinline style="object-fit: cover;">
-    <source src="assets/video/nebo.mp4" type="video/mp4">
-    <source src="assets/video/nebo.webm" type="video/webm">
-    Your browser does not support the video tag.
-  </video>
+<div class="video-card">
+    <video autoplay muted loop playsinline>
+        <source src="assets/video/nebo.mp4" type="video/mp4">
+    </video>
 
   <!-- КОНТЕНТ ПОВЕРХ ВИДЕО (исправлено) -->
   <div class="card-content position-relative z-index-1">
@@ -62,7 +58,7 @@
   
   /* Дополнительные стили для красоты */
   .card-content {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2);
     padding: 30px;
     border-radius: 16px;
     color: white;
