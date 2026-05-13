@@ -29,13 +29,18 @@
     </nav>
     <header class="mt-8">
         <div>
-            <div class="container"><div class="video-container position-relative w-100" style="min-height: 400px;">
-    <video class="position-absolute top-0 start-0 w-100 h-100" autoplay muted loop playsinline style="object-fit: cover;">
-        <source src="assets/video/небо.mp4" type="video/mp4">
-        <!-- WebM для лучшей совместимости -->
-        <source src="assets/video/небо.webm" type="video/webm">
-        Ваш браузер не поддерживает видео.
-    </video>
+            <div class="container"><!-- Контейнер для видео и контента -->
+<div class="position-relative w-100" style="min-height: 400px;">
+  
+  <!-- САМО ВИДЕО -->
+  <!-- Важно: используйте position-absolute, чтобы видео накладывалось на контент -->
+  <video class="position-absolute top-0 start-0 w-100 h-100" autoplay muted loop playsinline style="object-fit: cover;">
+    <!-- Укажите ПРАВИЛЬНЫЙ путь к вашему файлу -->
+    <source src="assets/video/nebo.mp4" type="video/mp4">
+    <!-- Добавьте файл в формате WebM для лучшей совместимости -->
+    <source src="assets/video/nebo.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
     <div class="card-content">
         <h3>Программах, в которых работаю</h3>
         <p></p>
@@ -50,7 +55,14 @@
         <p>Movavi Video Editor 25</p>
         <p>Blender</p>
     </div>
-</div></div>
+</div>
+
+<style>
+  /* Вспомогательный класс для z-index, если у вас его нет */
+  .z-index-1 {
+    z-index: 1;
+  }
+</style></div>
         </div>
     </header>
     <section id="work">
