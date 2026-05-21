@@ -16,98 +16,144 @@
 </head>
 
 <body style="background: rgb(157,176,139);">
-    <nav class="navbar navbar-expand-md fixed-top bg-transparent mt-0 pt-0 mb-0 pb-0" id="head" style="background: #a1af8e;height: 80px;color: rgb(161,175,142);">
-        <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="background: rgba(255,255,255,0);color: rgb(161,175,142);"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse me-0 pe-10" id="navcol-1" style="background: #728565;margin-right: 760px;border-bottom-right-radius: 30px;padding: 30px;margin-top: -10px;transform: translate(-14px);">
-                <ul class="navbar-nav me-0">
-                    <li class="nav-item pt-1" style="color: #000000;transform: translate(26px) scale(2);"><a class="nav-link ps-4 pe-4 pt-1 pb-1" style="font-family: Dudka;color: #000000;background: #98b187;border-radius: 25px;font-size: 10px;text-align: justify;font-weight: bold;" href="#">Главная</a></li>
-                    <li class="nav-item pt-1" style="color: #000000;transform: translate(125px) scale(2);"><a class="nav-link ps-4 pe-4 pt-1 pb-1" href="#work" style="font-family: Dudka;color: #000000;background: #98b187;border-radius: 25px;font-size: 10px;text-align: justify;font-weight: bold;">Работы</a></li>
-                    <li class="nav-item mt-0 pt-1 pb-1" style="font-family: Dudka;color: #000000;border-radius: 25px;transform: translate(225px) scale(2);"><a class="nav-link ms-0 ps-4 pe-4 mt-0 pt-1 pb-1" href="#contack" style="font-family: Dudka;color: #000000;background: #98b187;border-radius: 25px;font-size: 10px;text-align: center;transform: translate(2px);font-weight: bold;">Контакты</a></li>
+    <header class="mt-0 pt-5">
+        <div class="container">
+            <div><!-- Видео на весь экран -->
+<div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="assets/video/nebo.mp4" type="video/mp4">
+    </video>
+</div>
+
+<style>
+    /* Видео на весь экран */
+    .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+    
+    .video-background video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+    
+    /* Контент поверх видео */
+    .content-overlay {
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .card-content {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        padding: 30px 40px;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        max-width: 450px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .card-content h3 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+    
+    .card-content p {
+        margin: 8px 0;
+        font-size: 1rem;
+    }
+    
+    /* Адаптация для мобильных */
+    @media (max-width: 768px) {
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            font-size: 1.2rem;
+        }
+    }
+</style></div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-md fixed-top bg-opacity-10 me-0 pe-0 mb-0 pb-2" style="background: rgb(121,132,107);">
+        <div class="container-fluid"><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1" style="background: #79846b;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse ps-3 pe-3 mt-0 pt-2 pb-2" id="navcol-1" style="background: rgba(121,132,107,0.1);border-radius: 10px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-4" style="background: #a1af8e;border-radius: 15px;"><a class="nav-link active ms-3 me-3" href="#" style="font-size: 16px;">Главная</a></li>
+                    <li class="nav-item me-4" style="background: #a1af8e;border-radius: 15px;"><a class="nav-link ms-3 me-3" href="#work" style="color: rgb(0,0,0);">Работы</a></li>
+                    <li class="nav-item me-4" style="background: #a1af8e;border-radius: 15px;"><a class="nav-link ms-3 me-3" href="#contack" style="color: rgb(0,0,0);">Контакт</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="mt-8">
-        <div>
-            <div class="container"><!-- Контейнер для видео и контента -->
-<div class="video-card">
-    <video autoplay muted loop playsinline>
-        <source src="assets/video/nebo.mp4" type="video/mp4">
-    </video>
-
-  <!-- КОНТЕНТ ПОВЕРХ ВИДЕО (исправлено) -->
-  <div class="card-content position-relative z-index-1">
-    <h3>Программах, в которых работаю</h3>
-    <p>Adobe Illustrator</p>
-    <p>Adobe After Effects</p>
-    <p>Adobe InDesign</p>
-    <p>Adobe Photoshop</p>
-    <p>Bootstrap Studio</p>
-    <p>CorelDRAW.Graphics.Suite</p>
-    <p>Easy Paint Tool SAI 2</p>
-    <p>Krita</p>
-    <p>Movavi Video Editor 25</p>
-    <p>Blender</p>
-  </div>
-</div>
-
-<style>
-  .z-index-1 {
-    z-index: 1;
-  }
-  
-  /* Дополнительные стили для красоты */
-  .card-content {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    border-radius: 16px;
-    color: white;
-    max-width: 400px;
-    margin: 20px;
-    backdrop-filter: blur(5px);
-  }
-</style></div>
+    <section class="mt-6 mb-6">
+        <div class="container" style="background: rgba(161,175,142,0);">
+            <div class="row" style="background: rgba(161,175,142,0);">
+                <div class="col ps-4 pe-4 pt-2 pb-2" style="background: rgba(0,0,0,0.22);border-radius: 15px;">
+                    <h1 style="text-align: left;color: rgb(255,255,255);font-size: 36px;">Программы, в которых работаю</h1>
+                    <p class="pt-4" style="text-align: left;color: rgb(255,255,255);font-size: 24px;">Adobe Illustrator<br>Adobe After Effects<br>Adobe InDesign<br>Adobe Photoshop<br>Bootstrap Studio<br>CorelDRAW Graphics Suite<br>Easy Paint Tool SAI 2<br>Krita<br>Movavi Video Editor 25<br>Blender<br><br></p>
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
         </div>
-    </header>
-    <section id="work">
+    </section>
+    <section class="mt-5" id="work" style="height: 0px;"></section>
+    <section class="mt-5" id="work-1" style="height: 0px;">
         <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 class="mt-2 pt-3 pb-3" style="font-weight: bold;background: #7b846d;border-radius: 25px;font-size: 22px;">Работы</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-6">
+        <div class="container" style="background: rgb(121,132,107);border-radius: 10px;">
             <section class="py-4 py-xl-5">
-                <div class="container">
-                    <div class="row mb-5">
-                        <div class="col-md-8 col-xl-6 text-center mx-auto">
-                            <h2 class="mt-2 pt-3 pb-3" style="font-weight: bold;background: #768468;border-radius: 25px;font-size: 40px;">Работы</h2>
-                        </div>
-                    </div>
-                    <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3" data-bss-baguettebox="">
+                <div class="container-fluid p-0">
+                    <div class="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3" data-bss-baguettebox="">
+                        <div class="col"><a href="assets/img/карточка%20стиля%20с%20логотипом%20Италия.png"><img class="img-fluid mt-0" src="assets/img/карточка%20стиля%20с%20логотипом%20Италия.png"></a></div>
                         <div class="col"><a href="assets/img/2Консепт-арт_Вуррен.png"><img class="img-fluid" src="assets/img/2Консепт-арт_Вуррен.png"></a></div>
-                        <div class="col"><a href="assets/img/лабиринт%20фавна%20афиша.png"><img class="img-fluid" src="assets/img/лабиринт%20фавна%20афиша.png"></a></div>
-                        <div class="col"><a href="assets/img/Плакат%20pjd%20rne[e.png"><img class="img-fluid" src="assets/img/Плакат%20pjd%20rne[e.png"></a></div>
-                        <div class="col"><a href="assets/img/Плакат%20ременат.png"><img class="img-fluid" src="assets/img/Плакат%20ременат.png"></a></div>
-                        <div class="col"><a href="assets/img/Плакат.png"><img class="img-fluid" src="assets/img/Плакат.png"></a></div>
-                        <div class="col"><a href="assets/img/Снимок%20экрана%202026-05-13%20210810.png"><img class="img-fluid" src="assets/img/Снимок%20экрана%202026-05-13%20210810.png"></a></div>
-                        <div class="col"><a href="assets/img/Презентация%20фирменного%20стиля.png"><img class="img-fluid" src="assets/img/Презентация%20фирменного%20стиля.png"></a></div>
-                        <div class="col"><a href="assets/img/Архивихт__.jpg"><img class="img-fluid" src="assets/img/Архивихт__.jpg"></a></div>
-                        <div class="col"><a href="assets/img/Архивихт4.jpg"><img class="img-fluid" src="assets/img/Архивихт4.jpg"></a></div>
-                        <div class="col"><a href="assets/img/Архивихт5.jpg"><img class="img-fluid" src="assets/img/Архивихт5.jpg"></a></div>
-                        <div class="col"><a href="assets/img/Снимок%20экрана%202026-05-13%20212040.png"><img class="img-fluid ms-4 ps-0" src="assets/img/Снимок%20экрана%202026-05-13%20212040.png"></a></div>
-                        <div class="col"><a href="assets/img/Цветов%20Андрей%20Гд%2022-9к-2%20Авиша%20Лампа.jpg"><img class="img-fluid" src="assets/img/Цветов%20Андрей%20Гд%2022-9к-2%20Авиша%20Лампа.jpg"></a></div>
-                        <div class="col"><a href="assets/img/maxresdefault.jpg"><img class="img-fluid" src="assets/img/maxresdefault.jpg"></a></div>
                         <div class="col"><a href="assets/img/упоковка_2.png"><img class="img-fluid" src="assets/img/упоковка_2.png"></a></div>
-                        <div class="col"><a href="assets/img/карточка%20стиля%20с%20логотипом%20Италия.png"><img class="img-fluid" src="assets/img/карточка%20стиля%20с%20логотипом%20Италия.png"></a></div>
-                        <div class="col"><a href="assets/img/2Книга%20За%20гранью%20Скиталец2.jpg"><img class="img-fluid" src="assets/img/2Книга%20За%20гранью%20Скиталец2.jpg"></a></div>
-                        <div class="col"><a href="assets/img/2Книга%20За%20гранью%20Скиталец3.jpg"><img class="img-fluid" src="assets/img/2Книга%20За%20гранью%20Скиталец3.jpg"></a></div>
-                        <div class="col"><a href="assets/img/2Книга%20За%20гранью%20Скиталец4.jpg"><img class="img-fluid" src="assets/img/2Книга%20За%20гранью%20Скиталец4.jpg"></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col mt-6 pt-10 mb-0 pb-10" style="background: url(&quot;assets/img/Снимок%20экрана%202026-05-13%20223859.png&quot;) top;text-align: center;"><a class="btn btn-primary btn-lg btn-default" role="button" href="https://website-starwater-2.mrkecqa.workers.dev/#" style="transform: translate(0px);background: rgb(121,132,107);">Переход на сайт</a></div>
+                        <div class="col"><a href="assets/img/maxresdefault.jpg"><img class="img-fluid mt-4" src="assets/img/maxresdefault.jpg"></a></div>
+                        <div class="col"><a href="assets/img/Реклама%20Руин%20Щекод-03.png"><img class="img-fluid mt-3" src="assets/img/Реклама%20Руин%20Щекод-03.png"></a></div>
+                        <div class="col"><a href="assets/img/Равновесия.png"><img class="img-fluid" src="assets/img/Равновесия.png"></a></div>
+                        <div class="col"><a href="assets/img/лабиринт%20фавна%20афиша.png"><img class="img-fluid" src="assets/img/лабиринт%20фавна%20афиша.png"></a></div>
+                        <div class="col"><a href="assets/img/Плакат.png"><img class="img-fluid" src="assets/img/Плакат.png"></a></div>
+                        <div class="col"><a href="assets/img/Плакат%20pjd%20rne[e.png"><img class="img-fluid" src="assets/img/Плакат%20pjd%20rne[e.png"></a></div>
+                        <div class="col"><a href="assets/img/Плакат%20ременат.png"><img class="img-fluid mt-5" src="assets/img/Плакат%20ременат.png"></a></div>
+                        <div class="col"><a class="text-center ms-5" href="assets/img/Снимок%20экрана%202026-05-13%20212040.png" style="text-align: center;"><img class="img-fluid" src="assets/img/Снимок%20экрана%202026-05-13%20212040.png" style="text-align: center;"></a></div>
+                        <div class="col"><a href="assets/img/Снимок%20экрана%202026-05-13%20210810.png"><img class="img-fluid mt-5" src="assets/img/Снимок%20экрана%202026-05-13%20210810.png"></a></div>
+                        <div class="col"><a href="assets/img/Страница%201.png"><img class="img-fluid" src="assets/img/Страница%201.png"></a></div>
+                        <div class="col"><a href="assets/img/Цветов%20Андрей%20Гд%2022-9к-2%20Авиша%20Лампа.jpg"><img class="img-fluid" src="assets/img/Цветов%20Андрей%20Гд%2022-9к-2%20Авиша%20Лампа.jpg"></a></div>
+                        <div class="col"><a href="assets/img/Архивихт__.jpg"><img class="img-fluid" src="assets/img/Архивихт__.jpg"></a></div>
                     </div>
                 </div>
             </section>
         </div>
     </section>
-    <footer class="mt-5 pt-0 mb-0 pb-6" id="contack" style="background: #768468;">
-        <div class="row"></div>
-        <div class="row mt-6">
+    <footer class="mt-5 pt-0 mb-0 pb-4" id="contack" style="background: #768468;">
+        <div class="row mt-6 pt-4">
             <div class="col" style="text-align: center;">
                 <p style="font-size: 24px;color: rgb(255,255,255);">t.me/Sit_Mufflon</p>
             </div>
